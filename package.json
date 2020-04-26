@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "laricai",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Guia de restaurantes e bares com tele-entrega no Vale do Caí - RS.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Yuri Brunetto <brunettoyuri@gmail.com>",
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
@@ -16,7 +16,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

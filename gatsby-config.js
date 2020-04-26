@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Laricaí`,
-    description: `Delivery no Vale do Caí`,
+    title: `LariCaí - Guia para tele-entrega de Restaurantes e Bares no Vale do Caí`,
+    description: `Guia de restaurantes e bares com tele-entrega no Vale do Caí - RS.`,
     author: `@brun3tto`,
   },
   plugins: [
