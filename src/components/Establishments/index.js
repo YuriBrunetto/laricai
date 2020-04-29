@@ -1,12 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Establishment from '../Establishment'
 import { EstablishmentsWrapper, EstablishmentsList } from './styles'
 
-const Establishments = () => (
+const Establishments = ({ city }) => (
   <EstablishmentsWrapper>
     <div className="common-limiter">
-      <h4 className="city">Feliz - RS</h4>
+      <h4 className="city">{city}</h4>
 
       <EstablishmentsList>
         <Establishment />
@@ -23,5 +24,9 @@ const Establishments = () => (
     </div>
   </EstablishmentsWrapper>
 )
+
+Establishments.propTypes = {
+  city: PropTypes.string.isRequired,
+}
 
 export default Establishments

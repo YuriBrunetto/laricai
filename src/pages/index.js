@@ -8,10 +8,13 @@ import Establishments from '../components/Establishments'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Laricaí" />
+    <SEO title="Home" />
 
     <Categories />
-    <Establishments />
+
+    <Establishments city="Feliz" />
+    <Establishments city="Bom Princípio" />
+    <Establishments city="São Sebastião do Caí" />
   </Layout>
 )
 

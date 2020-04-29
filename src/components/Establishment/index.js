@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Actions from '../Actions'
 import { EstablishmentWrapper } from './styles'
 
 const Establishment = () => (
@@ -14,6 +15,8 @@ const Establishment = () => (
       Rua Frei Caneca, 1029 - Centro<br />
       (51) 3637 3001
     </div>
+
+    <Actions />
   </EstablishmentWrapper>
 )
 

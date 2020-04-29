@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
     content: '';
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    background: var(--rainbow);
     position: absolute;
     top: 0;
     left: 0;

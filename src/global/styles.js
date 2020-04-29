@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --rainbow: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+  }
+
+  ::selection {
+    background-color: #333;
+    color: #fff;
+  }
+
   * {
     margin: 0;
     padding: 0;

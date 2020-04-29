@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Header from '../Header'
 import GlobalStyle from '../../global/styles'
+import Header from '../Header'
+import Footer from '../Footer'
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
 
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
