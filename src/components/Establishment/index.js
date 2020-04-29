@@ -1,18 +1,22 @@
 import React from 'react'
 
 import Actions from '../Actions'
+import Image from '../Image'
 import { EstablishmentWrapper } from './styles'
 
 const Establishment = () => (
   <EstablishmentWrapper>
-    <span role="img" className="emojis" aria-label="Categorias">🍺🍔🍕🌭🥗</span>
+    <span role="img" className="emojis" aria-label="Categorias">
+      🍺🍔🍕🌭🥗
+    </span>
     <div className="image">
-      <img src="/images/lamb.jpg" alt="Lamb Brewpub" />
+      <Image />
     </div>
 
     <div className="title">Lamb Brewpub</div>
     <div className="description">
-      Rua Frei Caneca, 1029 - Centro<br />
+      Rua Frei Caneca, 1029 - Centro
+      <br />
       (51) 3637 3001
     </div>
 

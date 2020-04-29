@@ -11,19 +11,6 @@ export const EstablishmentWrapper = styled.div`
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-
-    &:before {
-      content: '';
-      display: block;
-      padding-bottom: 56.25%;
-    }
-
-    img {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
   }
 
   .title {
