@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 export const CategoriesWrapper = styled.section`
   padding: 32px 0;

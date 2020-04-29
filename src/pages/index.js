@@ -8,7 +8,7 @@ import Establishments from '../components/Establishments'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="" />
+    <SEO title="Laricaí" />
 
     <Categories />
     <Establishments />
