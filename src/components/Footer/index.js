@@ -9,6 +9,7 @@ const Footer = () => (
       href="https://twitter.com/piguearthur"
       title="Seguir @piguearthur no Twitter"
       target="_blank"
+      rel="noopener noreferrer"
     >
       arthur freiberger
     </a>{' '}
@@ -17,6 +18,7 @@ const Footer = () => (
       href="https://twitter.com/brun3tto"
       title="Seguir @brun3tto no Twitter"
       target="_blank"
+      rel="noopener noreferrer"
     >
       yuri brunetto
     </a>

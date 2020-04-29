@@ -12,9 +12,7 @@ const IndexPage = () => (
 
     <Categories />
 
-    <Establishments city="Feliz" />
-    <Establishments city="Bom Princípio" />
-    <Establishments city="São Sebastião do Caí" />
+    <Establishments city="Vale do Caí" />
   </Layout>
 )
 

@@ -1,24 +1,29 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { ActionsWrapper, ActionsAnchor } from './styles'
 
-const Actions = () => (
+const Actions = ({ title, phone, whatsapp }) => (
   <ActionsWrapper>
     <ActionsAnchor
-      href="https://api.whatsapp.com/send?phone=5551999999999&text=sua%20mensagem"
-      title="Mandar mensagem no WhatsApp para o estabelecimento"
+      href={`https://api.whatsapp.com/send?phone=${whatsapp}&text=sua%20mensagem`}
+      title={`Mandar mensagem no WhatsApp para ${title}`}
       target="_blank"
+      rel="noopener noreferrer"
     >
       WhatsApp
     </ActionsAnchor>
 
-    <ActionsAnchor
-      href="tel:5551999999999"
-      title="Ligar para o estabelecimento"
-    >
+    <ActionsAnchor href={`tel:${phone} `} title={`Ligar para ${title}`}>
       Ligar
     </ActionsAnchor>
   </ActionsWrapper>
 )
+
+Actions.propTypes = {
+  title: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  whatsapp: PropTypes.string.isRequired,
+}
 
 export default Actions
