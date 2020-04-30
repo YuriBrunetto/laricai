@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 import Actions from '../Actions'
 import Image from '../Image'
@@ -29,14 +30,16 @@ const Establishment = ({
   whatsapp,
   categories,
   city,
+  slug,
 }) => (
   <EstablishmentWrapper>
     <span role="img" className="emojis" aria-label="Categorias">
       {categories.map(category => handleCategoryEmoji(category))}
     </span>
-    <div className="image">
+
+    <Link to={slug} title={title} className="image">
       <Image />
-    </div>
+    </Link>
 
     <div className="title">{title}</div>
     <div className="description">
@@ -44,7 +47,6 @@ const Establishment = ({
       <br />
       {phone}
     </div>
-
     <Actions title={title} phone={phone} whatsapp={whatsapp} />
   </EstablishmentWrapper>
 )
@@ -56,6 +58,7 @@ Establishment.propTypes = {
   whatsapp: PropTypes.string.isRequired,
   categories: PropTypes.array.isRequired,
   city: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default Establishment

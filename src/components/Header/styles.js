@@ -15,6 +15,11 @@ export const HeaderWrapper = styled.header`
     left: 0;
   }
 
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
   h2 {
     font-size: 16px;
     margin-top: 16px;

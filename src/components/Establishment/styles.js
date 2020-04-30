@@ -5,12 +5,21 @@ export const EstablishmentWrapper = styled.div`
   margin: 0 32px 48px;
 
   .image {
+    display: block;
     margin-top: 8px;
     border: 2px solid #eee;
     font-size: 0;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+
+    &:hover .gatsby-image-wrapper {
+      transform: scale(1.1);
+    }
+
+    .gatsby-image-wrapper {
+      transition: 0.3s;
+    }
   }
 
   .title {

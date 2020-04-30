@@ -11,6 +11,9 @@ const Establishments = ({ city }) => {
       allMarkdownRemark {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
               title
               address
@@ -37,6 +40,9 @@ const Establishments = ({ city }) => {
             (
               {
                 node: {
+                  fields: {
+                    slug
+                  },
                   frontmatter: {
                     title,
                     address,
@@ -57,6 +63,7 @@ const Establishments = ({ city }) => {
                 whatsapp={whatsapp}
                 categories={categories}
                 city={city}
+                slug={slug}
               />
             )
           )}
