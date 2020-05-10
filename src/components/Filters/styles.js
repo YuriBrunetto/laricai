@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CategoriesWrapper = styled.section`
+export const FiltersWrapper = styled.section`
   padding: 32px 0;
   border-bottom: 1px solid #eee;
 

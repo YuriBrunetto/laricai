@@ -5,6 +5,16 @@ export const HeaderWrapper = styled.header`
   border-bottom: 1px solid #eee;
   position: relative;
 
+  ${({ internal }) =>
+    internal &&
+    `
+    padding: 16px 0;
+
+    h1 {
+      font-size: 32px;
+    }
+  `}
+
   &:before {
     content: '';
     width: 100%;

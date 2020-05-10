@@ -1,22 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import Category from '../Category'
-import { CategoriesWrapper, LinksWrapper } from './styles'
+import { handleCategoryEmoji } from '../../utils'
 
-import categories from './data.json'
+const Categories = ({ categories }) => (
+  <div className="categories">
+    {categories.map(category => (
+      <span role="img" aria-label={category}>
+        {handleCategoryEmoji(category)}
+      </span>
+    ))}
+  </div>
+)
 
-function Categories() {
-  return (
-    <CategoriesWrapper>
-      <div className="common-limiter">
-        <h3>Filtre pela categoria:</h3>
-
-        <LinksWrapper>
-          {categories.map(({ title, emoji }, i) => <Category key={i} title={title} emoji={emoji} />)}
-        </LinksWrapper>
-      </div>
-    </CategoriesWrapper>
-  )
+Categories.propTypes = {
+  categories: PropTypes.array.isRequired,
 }
 
 export default Categories

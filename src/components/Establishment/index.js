@@ -4,24 +4,8 @@ import { Link } from 'gatsby'
 
 import Actions from '../Actions'
 import Image from '../Image'
+import Categories from '../Categories'
 import { EstablishmentWrapper } from './styles'
-
-const handleCategoryEmoji = category => {
-  switch (category) {
-    case 'beer':
-      return '🍺'
-    case 'burger':
-      return '🍔'
-    case 'pizza':
-      return '🍕'
-    case 'vegetarian':
-      return '🥗'
-    case 'hot-dog':
-      return '🌭'
-    default:
-      return null
-  }
-}
 
 const Establishment = ({
   title,
@@ -33,9 +17,7 @@ const Establishment = ({
   slug,
 }) => (
   <EstablishmentWrapper>
-    <span role="img" className="emojis" aria-label="Categorias">
-      {categories.map(category => handleCategoryEmoji(category))}
-    </span>
+    <Categories categories={categories} />
 
     <Link to={slug} title={title} className="image">
       <Image />

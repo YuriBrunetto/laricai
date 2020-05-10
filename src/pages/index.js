@@ -3,14 +3,14 @@ import React from 'react'
 // Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Categories from '../components/Categories'
+import Filters from '../components/Filters'
 import Establishments from '../components/Establishments'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <Categories />
+    <Filters />
 
     <Establishments city="Vale do Caí" />
   </Layout>

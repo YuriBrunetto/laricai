@@ -5,12 +5,12 @@ import GlobalStyle from '../../global/styles'
 import Header from '../Header'
 import Footer from '../Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, internal }) => {
   return (
     <>
       <GlobalStyle />
 
-      <Header />
+      <Header internal={internal} />
       <main>{children}</main>
       <Footer />
     </>
@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  internal: PropTypes.bool,
 }
 
 export default Layout

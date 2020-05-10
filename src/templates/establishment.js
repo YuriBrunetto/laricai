@@ -3,17 +3,19 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import Categories from '../components/Categories'
 import { HeaderWrapper } from './styles'
 
 const EstablishmentPage = ({ data }) => {
   const establishment = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout internal>
       <SEO title={establishment.frontmatter.title} />
 
       <HeaderWrapper>
-        <div className="common-limiter">
+        <div id="header-content" className="common-limiter">
+          <Categories categories={establishment.frontmatter.categories} />
           <h1>{establishment.frontmatter.title}</h1>
         </div>
       </HeaderWrapper>
