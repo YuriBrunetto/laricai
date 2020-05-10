@@ -25,5 +25,10 @@ export const EstablishmentWrapper = styled.div`
   .title {
     font-size: 32px;
     margin-top: 8px;
+    font-weight: bold;
+  }
+
+  .description {
+    color: rgba(0, 0, 0, 0.8);
   }
 `

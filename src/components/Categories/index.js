@@ -5,8 +5,8 @@ import { handleCategoryEmoji } from '../../utils'
 
 const Categories = ({ categories }) => (
   <div className="categories">
-    {categories.map(category => (
-      <span role="img" aria-label={category}>
+    {categories.map((category, i) => (
+      <span key={i} role="img" aria-label={category}>
         {handleCategoryEmoji(category)}
       </span>
     ))}

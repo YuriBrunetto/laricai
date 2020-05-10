@@ -3,22 +3,50 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Categories from '../components/Categories'
-import { HeaderWrapper } from './styles'
+import Section from '../components/Section'
+import HeaderEstablishment from '../components/HeaderEstablishment'
 
-const EstablishmentPage = ({ data }) => {
-  const establishment = data.markdownRemark
+const EstablishmentPage = ({ data: { markdownRemark } }) => {
+  const {
+    frontmatter: { categories, title, address, phone, whatsapp },
+  } = markdownRemark
 
   return (
     <Layout internal>
-      <SEO title={establishment.frontmatter.title} />
+      <SEO title={title} />
 
-      <HeaderWrapper>
-        <div id="header-content" className="common-limiter">
-          <Categories categories={establishment.frontmatter.categories} />
-          <h1>{establishment.frontmatter.title}</h1>
-        </div>
-      </HeaderWrapper>
+      <HeaderEstablishment
+        categories={categories}
+        title={title}
+        address={address}
+      />
+
+      <Section title="Cardápio">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo fugiat
+          accusantium, sint placeat architecto corrupti accusamus quibusdam,
+          voluptates error rerum recusandae quos autem incidunt quisquam
+          deserunt a ipsa omnis nostrum!
+        </p>
+      </Section>
+
+      <Section title="Onde entrega">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          exercitationem in id veniam numquam cupiditate recusandae, dolorum
+          animi modi, tempora perspiciatis vero doloribus, nostrum commodi ipsum
+          ducimus soluta quaerat sint?
+        </p>
+      </Section>
+
+      <Section title="Contato">
+        <a href={`tel:+55${phone}`} title={`Ligar para ${title}`}>
+          {phone}
+        </a>
+        <a href={`tel:+55${whatsapp}`} title={`Ligar para ${title}`}>
+          {whatsapp}
+        </a>
+      </Section>
     </Layout>
   )
 }
@@ -33,7 +61,6 @@ export const query = graphql`
         city
         phone
         whatsapp
-        date(fromNow: true, locale: "pt-BR")
       }
     }
   }

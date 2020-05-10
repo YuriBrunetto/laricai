@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -36,6 +36,10 @@ const GlobalStyle = createGlobalStyle`
   .common-limiter {
     max-width: 1250px;
     margin: 0 auto;
+
+    &.small {
+      max-width: 960px;
+    }
   }
 `
 

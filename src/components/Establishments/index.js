@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Establishment from '../Establishment'
 import { EstablishmentsWrapper, EstablishmentsList } from './styles'
 
-const Establishments = ({ city }) => {
+function Establishments({ city }) {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query EstablishmentList {
       allMarkdownRemark {
@@ -40,9 +40,7 @@ const Establishments = ({ city }) => {
             (
               {
                 node: {
-                  fields: {
-                    slug
-                  },
+                  fields: { slug },
                   frontmatter: {
                     title,
                     address,

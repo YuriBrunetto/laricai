@@ -10,6 +10,8 @@ export const handleCategoryEmoji = category => {
       return '🥗'
     case 'hot-dog':
       return '🌭'
+    case 'pancho':
+      return '🌭'
     default:
       return null
   }
