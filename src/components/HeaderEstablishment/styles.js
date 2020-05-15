@@ -43,6 +43,10 @@ export const HeaderWrapper = styled.header`
     h1 {
       color: #fff;
       font-size: 48px;
+
+      @media (max-width: 959px) {
+        font-size: 32px;
+      }
     }
 
     a {

@@ -6,15 +6,22 @@ export const StyledCategory = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: #333;
   text-decoration: none;
   margin: 0 16px;
+  flex-shrink: 0;
 
-  &:hover {
-    .icon {
-      border-width: 2px;
-      border-color: #333;
-      transform: rotate(1turn);
+  @media (max-width: 959px) {
+    margin: 0 8px;
+  }
+
+  @media (min-width: 960px) {
+    &:hover {
+      .icon {
+        border-width: 2px;
+        border-color: #333;
+        transform: rotate(1turn);
+      }
     }
   }
 
@@ -27,11 +34,21 @@ export const StyledCategory = styled(Link)`
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    transition: .3s;
+    transition: 0.3s;
+
+    @media (max-width: 959px) {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
   }
 
   .label {
     margin-top: 4px;
     font-size: 13px;
+
+    @media (max-width: 959px) {
+      font-size: 12px;
+    }
   }
 `

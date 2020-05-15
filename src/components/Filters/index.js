@@ -15,6 +15,9 @@ function Filters() {
           {categories.map(({ title, emoji }, i) => (
             <Category key={i} title={title} emoji={emoji} />
           ))}
+          {categories.map(({ title, emoji }, i) => (
+            <Category key={i} title={title} emoji={emoji} />
+          ))}
         </LinksWrapper>
       </div>
     </FiltersWrapper>

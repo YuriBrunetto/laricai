@@ -15,6 +15,14 @@ export const HeaderWrapper = styled.header`
     }
   `}
 
+  @media (max-width: 959px) {
+    padding: 24px 0 16px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
   &:before {
     content: '';
     width: 100%;
@@ -34,5 +42,10 @@ export const HeaderWrapper = styled.header`
     font-size: 16px;
     margin-top: 16px;
     font-weight: normal;
+
+    @media (max-width: 959px) {
+      font-size: 14px;
+      margin-top: 8px;
+    }
   }
 `

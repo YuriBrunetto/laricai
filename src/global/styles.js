@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   .common-limiter {
     max-width: 1250px;
     margin: 0 auto;
+    padding: 0 16px;
 
     &.small {
       max-width: 960px;

@@ -4,6 +4,11 @@ export const EstablishmentWrapper = styled.div`
   flex: 0 0 calc(33.33% - 64px);
   margin: 0 32px 48px;
 
+  @media (max-width: 959px) {
+    flex-basis: calc(100% - 64px);
+    margin: 0 32px 32px;
+  }
+
   .image {
     display: block;
     margin-top: 8px;
@@ -26,9 +31,17 @@ export const EstablishmentWrapper = styled.div`
     font-size: 32px;
     margin-top: 8px;
     font-weight: bold;
+
+    @media (max-width: 959px) {
+      font-size: 20px;
+    }
   }
 
   .description {
     color: rgba(0, 0, 0, 0.8);
+
+    @media (max-width: 959px) {
+      font-size: 14px;
+    }
   }
 `
