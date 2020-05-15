@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
+  main {
+    overflow: hidden;
+  }
+
   h1 {
     font-size: 40px;
   }
@@ -36,7 +40,8 @@ const GlobalStyle = createGlobalStyle`
   .common-limiter {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     &.small {
       max-width: 960px;
