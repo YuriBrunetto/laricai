@@ -8,7 +8,7 @@ import Footer from '../Footer'
 const Layout = ({ children, internal }) => {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle internal={internal} />
 
       <Header internal={internal} />
       <main>{children}</main>

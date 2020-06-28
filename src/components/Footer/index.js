@@ -4,7 +4,8 @@ import { FooterWrapper } from './styles'
 
 const Footer = () => (
   <FooterWrapper>
-    &copy; {new Date().getFullYear()} &mdash; desenvolvido com ❤️ por{' '}
+    &copy; {new Date().getFullYear()} &mdash; desenvolvido com ❤️ por
+    <br />
     <a
       href="https://twitter.com/piguearthur"
       title="Seguir @piguearthur no Twitter"

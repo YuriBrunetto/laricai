@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  #___gatsby {
+    padding-bottom: ${props => props.internal ? '80px' : '0'};
+  }
+
   body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;

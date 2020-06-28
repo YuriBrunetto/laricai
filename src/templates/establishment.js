@@ -1,12 +1,11 @@
 import React from 'react'
-import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Section from '../components/Section'
 import HeaderEstablishment from '../components/HeaderEstablishment'
-import { ContactLinkWrapper } from './styles'
+import { FloatingContact } from './styles'
 
 const EstablishmentPage = ({ data: { markdownRemark } }) => {
   const {
@@ -41,7 +40,18 @@ const EstablishmentPage = ({ data: { markdownRemark } }) => {
         </p>
       </Section>
 
-      <Section title="Contato">
+      <FloatingContact>
+        <div className="wrapper">
+          <a href={`tel:+55${whatsapp}`} title={`Ligar para ${title}`} className="whatsapp">
+            WhatsApp
+          </a>
+          <a href={`tel:+55${phone}`} title={`Ligar para ${title}`}>
+            Ligar
+          </a>
+        </div>
+      </FloatingContact>
+
+      {/* <Section title="Contato">
         <ContactLinkWrapper>
           <a href={`tel:+55${phone}`} title={`Ligar para ${title}`}>
             <FaPhoneAlt size="1em" /> {phone}
@@ -52,7 +62,7 @@ const EstablishmentPage = ({ data: { markdownRemark } }) => {
             <FaWhatsapp size="1.2em" /> {whatsapp}
           </a>
         </ContactLinkWrapper>
-      </Section>
+      </Section> */}
     </Layout>
   )
 }
